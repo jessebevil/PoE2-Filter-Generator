@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+#include <set>
 
 struct Color {
 	uint8_t r, g, b, a;
@@ -55,7 +56,7 @@ public:
 	bool ElderMap;
 	bool ShapedMap;
 	bool BlightedMap;
-	int MapTier;//1-17
+	int WaystoneTier;//1-17
 	bool HasImplicitMod;//if an item has any implicit mod or not.
 	bool HasCruciblePassiveTree;//if an item has a crucible passive skill tree or not.
 
@@ -70,7 +71,61 @@ public:
 
 };
 
-
 int main() {
+	static std::set<std::string> ClassSet = {
+		//Currency
+		"Stackable Currency",
+
+		//Armour / Armor
+		"Amulet",
+		"Belt",
+		"Body Armour",
+		"Boots",
+		"Charm",
+		"Gloves",
+		"Helmet",
+		"Ring",
+
+		//Weapons (Mainhand/Offhand)
+		"Bows",
+		"Claws",
+		"Daggers",
+		"One Hand Maces",
+		"One Hand Axes",
+		"One Hand Swords",
+		"Quarterstaves",
+		"Quivers",
+		"Sceptres",
+		"Shields",
+		"Staves",
+		"Two Hand Axes",
+		"Two Hand Maces",
+		"Two Hand Swords",
+		"Wands",
+
+		//Gems - Can't find correct tag for Uncut versions or Spirit gems. Perhaps using basetype instead
+		"Skill Gems",
+		"Support Gems",
+		//"Spirit Gem",
+		//"Uncut Skill Gem",
+		//"Uncut Support Gem",
+		//"Uncut Spirit Gem",
+
+		//Misc
+		"Jewels",
+		"Vault Keys"
+		"Waystones",
+		"Quest Items",
+
+	};
+
+	static std::set<std::string> BaseTypeSet = {
+
+	};
+
+	static std::set<std::string> RaritySet = {
+		"Normal", "Magic", "Rare", "Unique"
+	};
+
 
 }
